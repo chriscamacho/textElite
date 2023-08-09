@@ -38,7 +38,11 @@ of Elite with no combat or missions.
 //#include <conio.h>
 //#include <graph.h>
 #include <math.h>
-#include <malloc.h>
+#ifdef _WIN32
+# ifndef __clang__
+#  include <malloc.h>
+# endif
+#endif
 
 #include <ctype.h>	// toupper / tolower
 
